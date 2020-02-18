@@ -22,4 +22,12 @@ public class APIChampionInfo {
         writer.write(APIChampion);
         writer.close();
     }
+
+    public static void setVersionAPIChampion(String versionAPIChampion) throws IOException {
+        String APIChampion = "https://ddragon.leagueoflegends.com/cdn/"
+                + versionAPIChampion + "/data/en_US/champion.json";
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+        writer.write(APIChampion);
+        writer.close();
+    }
 }

@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @RestController
 @RequestMapping("/summonerChampionMasteryInfo")
@@ -20,7 +19,7 @@ public class SummonerChampionMasteryInfoRequest {
     private RestTemplate restTemplate;
 
     @RequestMapping("/{server}/{summonerName}")
-    public ChampionLists getchestGrantedChampions(@PathVariable("summonerName") String summonerName,
+    public ChampionLists getChestGrantedChampions(@PathVariable("summonerName") String summonerName,
                                                   @PathVariable("server") String server) {
         ChampionLists championLists = new ChampionLists();
         try {
