@@ -14,6 +14,7 @@ public class APIChampionInfo {
         while ((line = br.readLine()) != null) {
             lines.append(line);
         }
+        br.close();
         return lines.toString();
     }
 

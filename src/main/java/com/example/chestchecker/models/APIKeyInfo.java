@@ -13,7 +13,8 @@ public class APIKeyInfo {
         StringBuilder lines = new StringBuilder();
         while ((line = br.readLine()) != null) {
             lines.append(line);
-    }
+        }
+        br.close();
         return lines.toString();
 }
 
