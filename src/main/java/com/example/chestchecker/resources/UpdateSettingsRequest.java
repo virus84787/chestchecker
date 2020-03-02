@@ -38,4 +38,15 @@ public class UpdateSettingsRequest {
             error.printStackTrace();
         }
     }
+
+    @RequestMapping("/getAPIValues")
+    public String getAPIValue() {
+
+        try {
+            return "{\"apiKey\":\""+APIKeyInfo.getAPIKey()+"\",\"apiChampion\":\""+APIChampionInfo.getAPIChampion()+"\"}";
+
+        } catch (IOException error) {
+            return "error";
+        }
+    }
 }
