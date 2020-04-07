@@ -13,6 +13,7 @@ public class ChampionLists {
 
     public void setChestGrantedChampions(List<String> chestGrantedChampions) {
         this.chestGrantedChampions = chestGrantedChampions;
+        java.util.Collections.sort(chestGrantedChampions);
     }
 
     public List<String> getFreeChampions() {

@@ -41,7 +41,6 @@ public class ChampionInfo {
         } catch (Exception e) {
             System.out.println("error");
             e.printStackTrace();
-            // TODO: handle exception
         }
     }
 
@@ -66,6 +65,7 @@ public class ChampionInfo {
         for (Integer champId : freeChampionIds) {
                 chestGrantedChampions.add(mapChampionInfo.get(champId));
         }
+        java.util.Collections.sort(chestGrantedChampions);
         return chestGrantedChampions;
     }
 }
